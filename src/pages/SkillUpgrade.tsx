@@ -71,8 +71,8 @@ const SkillUpgrade = () => {
             Mentor's Gallery
           </h1>
           <p className="text-muted-foreground font-mono text-sm mb-10">
-            We are proud to honour our respected teachers. Kindly register yourself 
-            to be featured on our Teacher Honour wall. Please validate your identity here.
+            We are proud to honour our respected teachers. Kindly validate your identity with your erp credentials 
+            to be featured on our Teacher Honour wall.
           </p>
 
           {submitted ? (
